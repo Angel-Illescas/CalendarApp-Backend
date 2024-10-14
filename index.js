@@ -1,21 +1,19 @@
 const express = require('express');
 require('dotenv').config()
 
-console.log(process.env);
+//console.log(process.env);
 
 const app = express()
 
-//Directorio Pub
+
+app.use( '/api/auth', require( './routes/auth' ) )
+
+//Directorio Public
+
 
 app.use(express.static('public'));
 
-//Routes
 
-app.get('/',(req,res) => { 
-    res.json({
-        ok:true
-    })
-})
 
 //Listener
 
