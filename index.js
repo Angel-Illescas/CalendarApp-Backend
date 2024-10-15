@@ -1,6 +1,7 @@
 const express = require('express');
 const { dbConnection } = require('./database/config');
 require('dotenv').config()
+const cors = require('cors')
 
 //console.log(process.env);
 
@@ -13,6 +14,9 @@ dbConnection()
 //Lectura and parseo
 
 app.use(express.json())
+
+//CORS
+app.use(cors())
 
 //
 
