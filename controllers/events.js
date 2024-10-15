@@ -7,6 +7,11 @@ const getEvents = async (req, res = express.response) => {
         })
 }
 const createEvent = async (req, res = express.response) => {
+
+    //Verificar que tengo evento
+
+    console.log(req.body);
+
     res.status(201).json({
             ok: true,
             msg: "createEvent",
